@@ -107,7 +107,7 @@ namespace inf_ex1
              *  Test.runText(true); - Show config/input/output
              *  default Test.runText(false); - Does not show config/input/output
              */
-            Test.runTest(true);
+            Test.runTest();
         }
     }
 }
