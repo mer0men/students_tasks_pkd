@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Collections.Generic;
-using System.Text.RegularExpressions;
 
 namespace inf_ex1
 {
     internal class Program
     {
-        class textFormat
+        public class textFormat
         {
             public struct config
             {
@@ -28,8 +27,8 @@ namespace inf_ex1
             }
 
             private static config curConfig;
-            private string ENG = "az";
-            private string RUS = "ая";
+            private string ENG = "azAZ";
+            private string RUS = "аяАЯ";
             private string DIG = "09";
             // private List<char> ENG = new List<char>() {'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
             //     'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l',
@@ -63,18 +62,25 @@ namespace inf_ex1
             }
             public string format(string input)
             {
-                Console.WriteLine(input.Length);
                 string temp = "";
-                char f;
+                bool whiteSpace = false;
                 
-                foreach (char item in input)
+                input = input.Trim();
+                
+                foreach (char f in input)
                 {
-                    f = Char.Parse(item.ToString().ToLower());
-                    if ((curConfig.eng && f >= ENG[0] && f <= ENG[1]) ||
-                        (curConfig.rus && f >= RUS[0] && f <= RUS[1]) ||
+                    if (f == ' ' && !whiteSpace)
+                    {
+                        temp += f;
+                        whiteSpace = true;
+                    } else if ((curConfig.eng && ((f >= ENG[0] && f <= ENG[1]) || (f >= ENG[2] && f <= ENG[3]))) ||
+                        (curConfig.rus && ((f >= RUS[0] && f <= RUS[1]) || (f >= RUS[2] && f <= RUS[3]))) ||
                         (curConfig.dig && f >= DIG[0] && f <= DIG[1]) ||
                         (FORMAT.Count > 0 && FORMAT.Contains(f)))
-                        temp += item;
+                    {
+                        temp += f;
+                        whiteSpace = false;
+                    }
                 }
 
                 // for (int i = 0; i < input.Length; i++)
@@ -91,19 +97,17 @@ namespace inf_ex1
                 // {
                 //     if (FORMAT.Contains(Char.Parse(input[i].ToString().ToLower()))) temp += input[i];
                 // }
-                
-                return temp;
+                return temp.Trim();
             }
             
         }
         public static void Main()
         {
-            Stopwatch stopwatch = new Stopwatch();
-            textFormat f = new textFormat(true, false, false, "/");
-            stopwatch.Start();
-            Console.WriteLine(f.format("AnyФормат123</>"));
-            stopwatch.Stop();
-            Console.WriteLine("ms: " + stopwatch.ElapsedMilliseconds);
+            /*
+             *  Test.runText(true); - Show config/input/output
+             *  default Test.runText(false); - Does not show config/input/output
+             */
+            Test.runTest(true);
         }
     }
 }
