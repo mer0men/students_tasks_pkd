@@ -1,7 +1,7 @@
-﻿#Formating string instruction
+﻿# Formating string instruction
 
 ---
-##Create config
+## Create config
 
 ```c#
 textFormat <string_for_format> = new textFormat(<bool_for_eng>, <bool_for_rus>, <bool_for_dig>, <string_whiteList>);
@@ -13,7 +13,7 @@ textFormat <string_for_format> = new textFormat(<bool_for_eng>, <bool_for_rus>, 
 - `<string_whiteList>` - **white list of symbols**, *take string (ex: "</>")*
 
 ---
-##Work with method
+## Work with method
 
 ```c#
 string <result_name>;
