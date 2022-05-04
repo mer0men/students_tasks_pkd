@@ -185,6 +185,7 @@ namespace inf_ex1
                         // item.whiteList.Length > 0 ? t = item.whiteList : t = "None";
                         Console.WriteLine($"config: end={item.eng}; rus={item.rus}; dig={item.dig}; whiteList={t}\ninput: {item.input}\noutput: {item.output}\n\n");
                     }
+                    else Console.WriteLine("\n");
                 }
             }
             private static KeyValuePair<bool, long> test(bool eng, bool rus, bool dig, string whiteList, string input, string output)
