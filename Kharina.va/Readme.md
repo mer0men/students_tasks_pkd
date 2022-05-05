@@ -1,5 +1,5 @@
-#Ли Дмитрий
+#Харина Лера 
 
-- корп. почта: li.dsen@students.dvfu.ru
-- tg: elsium8091
-- vk: elsium
+- корп. почта: kharina.va@students.dvfu.ru
+- tg: aaaaavgust_9 (89841494185)
+- vk: aaaaavgust 
