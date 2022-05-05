@@ -1,2 +1,0 @@
-C:\Users\leedm\Desktop\files\informatic\students_tasks_pkd\li.dsen\inf_ex1\test\obj\Debug\test.csprojAssemblyReference.cache
-C:\Users\leedm\Desktop\files\informatic\students_tasks_pkd\li.dsen\inf_ex1\test\obj\Debug\test.csproj.CoreCompileInputs.cache
