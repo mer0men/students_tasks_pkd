@@ -63,21 +63,26 @@ namespace inf_ex1
             public string format(string input)
             {
                 string temp = "";
-                bool whiteSpace = false;
+                bool whiteSpace = true;
+                bool addSpace = false;
                 
-                input = input.Trim();
                 
                 foreach (char f in input)
                 {
                     if (f == ' ' && !whiteSpace)
                     {
-                        temp += f;
+                        addSpace = true;
                         whiteSpace = true;
                     } else if ((curConfig.eng && ((f >= ENG[0] && f <= ENG[1]) || (f >= ENG[2] && f <= ENG[3]))) ||
                         (curConfig.rus && ((f >= RUS[0] && f <= RUS[1]) || (f >= RUS[2] && f <= RUS[3]))) ||
                         (curConfig.dig && f >= DIG[0] && f <= DIG[1]) ||
                         (FORMAT.Count > 0 && FORMAT.Contains(f)))
                     {
+                        if (f != ' ' && addSpace)
+                        {
+                            temp += ' ';
+                            addSpace = false;
+                        }
                         temp += f;
                         whiteSpace = false;
                     }
@@ -97,7 +102,7 @@ namespace inf_ex1
                 // {
                 //     if (FORMAT.Contains(Char.Parse(input[i].ToString().ToLower()))) temp += input[i];
                 // }
-                return temp.Trim();
+                return temp;
             }
             
         }
