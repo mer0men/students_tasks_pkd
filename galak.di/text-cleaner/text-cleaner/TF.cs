@@ -34,6 +34,10 @@ namespace text_cleaner
         {
             return c >= 'А' && c <= 'я';
         }
+        bool IsDig(char c)
+        {
+            return c >= '0' && c <= '9';
+        }
 
         public string format(string text)
         {
@@ -54,6 +58,10 @@ namespace text_cleaner
                 }
                 if (!inserted && !blacklisted)
                 {
+                    if (!IsDig(text[i]) && !IsEngChar(text[i]) && !IsRusChar(text[i]) && text[i] != ' ')
+                    {
+                        sb.Append(text[i]);
+                    }
                     if (Eng)
                     {
                         if (IsEngChar(text[i]))
@@ -70,7 +78,7 @@ namespace text_cleaner
                     }
                     if (Dig)
                     {
-                        if (text[i] >= '0' && text[i] <= '9')
+                        if (IsDig(text[i]))
                         {
                             sb.Append(text[i]);
                         }
@@ -91,9 +99,20 @@ namespace text_cleaner
             }
             if (sb.Length > 0)
             {
-                if (sb[sb.Length - 1] == ' ')
+                try
                 {
-                    sb.Remove(sb.Length - 1, 1);
+                    while (sb[sb.Length - 1] == ' ')
+                    {
+                        sb.Remove(sb.Length - 1, 1);
+                    }
+                    while (sb[0] == ' ')
+                    {
+                        sb.Remove(0, 1);
+                    }
+                }
+                catch
+                {
+
                 }
             }
             return sb.ToString();
@@ -107,7 +126,7 @@ namespace text_cleaner
             string expected = "";*/
 
 
-            TextFormatter TF = new TextFormatter(true, false, false, "", "");
+            TextFormatter TF = new TextFormatter(true, true, true, "", "");
             string x = System.IO.File.ReadAllText("input.txt");
             x = TF.format(x);
             //do not change
