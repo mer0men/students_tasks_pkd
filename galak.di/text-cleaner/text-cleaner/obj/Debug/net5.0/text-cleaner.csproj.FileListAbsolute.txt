@@ -1,0 +1,16 @@
+C:\Users\MiBook\Desktop\tasks\text-cleaner\text-cleaner\bin\Debug\net5.0\text-cleaner.exe
+C:\Users\MiBook\Desktop\tasks\text-cleaner\text-cleaner\bin\Debug\net5.0\text-cleaner.deps.json
+C:\Users\MiBook\Desktop\tasks\text-cleaner\text-cleaner\bin\Debug\net5.0\text-cleaner.runtimeconfig.json
+C:\Users\MiBook\Desktop\tasks\text-cleaner\text-cleaner\bin\Debug\net5.0\text-cleaner.runtimeconfig.dev.json
+C:\Users\MiBook\Desktop\tasks\text-cleaner\text-cleaner\bin\Debug\net5.0\text-cleaner.dll
+C:\Users\MiBook\Desktop\tasks\text-cleaner\text-cleaner\bin\Debug\net5.0\text-cleaner.pdb
+C:\Users\MiBook\Desktop\tasks\text-cleaner\text-cleaner\obj\Debug\net5.0\text-cleaner.csproj.AssemblyReference.cache
+C:\Users\MiBook\Desktop\tasks\text-cleaner\text-cleaner\obj\Debug\net5.0\text-cleaner.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MiBook\Desktop\tasks\text-cleaner\text-cleaner\obj\Debug\net5.0\text-cleaner.AssemblyInfoInputs.cache
+C:\Users\MiBook\Desktop\tasks\text-cleaner\text-cleaner\obj\Debug\net5.0\text-cleaner.AssemblyInfo.cs
+C:\Users\MiBook\Desktop\tasks\text-cleaner\text-cleaner\obj\Debug\net5.0\text-cleaner.csproj.CoreCompileInputs.cache
+C:\Users\MiBook\Desktop\tasks\text-cleaner\text-cleaner\obj\Debug\net5.0\text-cleaner.dll
+C:\Users\MiBook\Desktop\tasks\text-cleaner\text-cleaner\obj\Debug\net5.0\refint\text-cleaner.dll
+C:\Users\MiBook\Desktop\tasks\text-cleaner\text-cleaner\obj\Debug\net5.0\text-cleaner.pdb
+C:\Users\MiBook\Desktop\tasks\text-cleaner\text-cleaner\obj\Debug\net5.0\text-cleaner.genruntimeconfig.cache
+C:\Users\MiBook\Desktop\tasks\text-cleaner\text-cleaner\obj\Debug\net5.0\ref\text-cleaner.dll
