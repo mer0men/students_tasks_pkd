@@ -1,3 +1,0 @@
-Чудов Семен
-
-@SemyelOneGamin
