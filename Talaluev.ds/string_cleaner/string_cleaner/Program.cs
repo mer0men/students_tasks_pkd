@@ -2,79 +2,122 @@
 
 namespace fefu;
 
-public class String_Cleaner
+public class Char
 {
-    public bool eng = false;
-    public bool rus = false;
-    public bool nums = false;
-    public string black_list = "";
-
-    public String_Cleaner(bool eng,bool rus,bool nums,string black_list)
+    public static bool IsEng(char c)
     {
-        this.eng = eng;
-        this.rus = rus;
-        this.nums = nums;
-        this.black_list = black_list;
-    }
-     public static string Clean(string str, String_Cleaner rule)
-    {
-        string str_res = "";
-        str = str.Trim();
-        for (int i = 0; i < str.Length; i++)
+        if (c >= 'A' && c <= 'Z' || c >= 'a' && c <= 'z')
         {
-            char c = str[i];
-            if(c == ' ')
+            return true;
+        }
+        return false;
+    }
+    public static bool IsRus(char c)
+    {
+        if (c >= 'А' && c <= 'Я' || c >= 'а' && c <= 'я')
+        {
+            return true;
+        }
+        return false;
+    }
+    public static bool IsDigit(char c)
+    {
+        if (c >= '0' && c <= '9')
+        {
+            return true;
+        }
+        return false;
+    }
+}
+public class StringCleaner
+{
+    public bool Eng = false;
+    public bool Rus = false;
+    public bool Nums = false;
+    public string WhiteList = "";
+    public string BlackList = "";
+
+    public StringCleaner(bool Eng, bool Rus, bool Nums, string WhiteList, string BlackList)
+    {
+        this.Eng = Eng;
+        this.Rus = Rus;
+        this.Nums = Nums;
+        this.WhiteList = WhiteList;
+        this.BlackList = BlackList;
+    }
+    public string Clean(string Str)
+    {
+
+        string StrRez = "";
+        Str = Str.Trim();
+        for (int i = 0; i < Str.Length; i++)
+        {
+            char c = Str[i];
+            if (c == ' ')
             {
-                if(str_res == "")
+                if (StrRez == "")
                 {
 
                 }
-                else if (str_res[str_res.Length - 1] != ' ')
+                else if (StrRez[StrRez.Length - 1] != ' ')
                 {
-                    str_res += ' ';
+                    StrRez += ' ';
                 }
                 continue;
             }
-            if (rule.black_list != "")
+            if (this.BlackList != "")
             {
-                if (rule.black_list.Contains(c))
+                if (this.BlackList.Contains(c))
                 {
                     continue;
                 }
             }
-            if (rule.rus)
+            if (this.WhiteList != "")
             {
-                if (c >= 'А' && c <= 'Я' || c >= 'а' && c <= 'я')
+                if (this.WhiteList.Contains(c))
                 {
+                    StrRez += c;
                     continue;
                 }
             }
-            if (rule.eng)
+            if (this.Rus)
             {
-                if (c >= 'A' && c <= 'Z' || c>= 'a' && c<= 'z')
+                if (Char.IsRus(c))
                 {
+                    StrRez += c;
                     continue;
                 }
             }
-            if (rule.nums)
+            if (this.Eng)
             {
-                if (char.IsDigit(c))
+                if (Char.IsEng(c))
                 {
+                    StrRez += c;
                     continue;
                 }
             }
-            str_res += c;
+            if (this.Nums)
+            {
+                if (Char.IsDigit(c))
+                {
+                    StrRez += c;
+                    continue;
+                }
+            }
         }
-        if (str_res[str_res.Length-1] == ' ')
+        if (StrRez[StrRez.Length - 1] == ' ')
         {
-            str_res = str_res.Remove(str_res.Length - 1, 1);
+            StrRez = StrRez.Remove(StrRez.Length - 1, 1);
         }
-        return str_res;
+        return StrRez;
     }
 }
 class MainClass
 {
     public static void Main()
     {
+        StringCleaner stringCleaner = new StringCleaner(true, true, true, "", "");
+        string Str = "!#";
+        Console.WriteLine(stringCleaner.Clean(Str));
     }
 }
