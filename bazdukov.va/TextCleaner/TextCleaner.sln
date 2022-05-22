@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextCleaner", "TextCleaner.csproj", "{DA214C96-0A16-48B2-ABE1-C6F5A8BF13E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA214C96-0A16-48B2-ABE1-C6F5A8BF13E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA214C96-0A16-48B2-ABE1-C6F5A8BF13E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA214C96-0A16-48B2-ABE1-C6F5A8BF13E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA214C96-0A16-48B2-ABE1-C6F5A8BF13E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
