@@ -47,6 +47,9 @@ namespace TextCleaner
                 if (IsRussian(elem)) newString.Append(elem);
                 if (IsDigital(elem)) newString.Append(elem);
             }
+
+            if (newString[0] == ' ') newString.Remove(1, 0);
+            if (newString[newString.Length - 1] == ' ') newString.Remove(1, newString.Length - 1);
             return newString.ToString();
         }
         
