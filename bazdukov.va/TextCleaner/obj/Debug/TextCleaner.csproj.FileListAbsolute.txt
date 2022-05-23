@@ -1,0 +1,7 @@
+C:\Users\bazdu\RiderProjects\students_tasks_pkd\bazdukov.va\TextCleaner\obj\Debug\TextCleaner.csproj.AssemblyReference.cache
+C:\Users\bazdu\RiderProjects\students_tasks_pkd\bazdukov.va\TextCleaner\obj\Debug\TextCleaner.csproj.SuggestedBindingRedirects.cache
+C:\Users\bazdu\RiderProjects\students_tasks_pkd\bazdukov.va\TextCleaner\obj\Debug\TextCleaner.csproj.CoreCompileInputs.cache
+C:\Users\bazdu\RiderProjects\students_tasks_pkd\bazdukov.va\TextCleaner\bin\Debug\TextCleaner.exe
+C:\Users\bazdu\RiderProjects\students_tasks_pkd\bazdukov.va\TextCleaner\bin\Debug\TextCleaner.pdb
+C:\Users\bazdu\RiderProjects\students_tasks_pkd\bazdukov.va\TextCleaner\obj\Debug\TextCleaner.exe
+C:\Users\bazdu\RiderProjects\students_tasks_pkd\bazdukov.va\TextCleaner\obj\Debug\TextCleaner.pdb

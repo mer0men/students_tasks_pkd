@@ -4,23 +4,26 @@ using System.Xml.Schema;
 
 namespace TextCleaner
 {
-    internal class TextFormatter
+    public class TextFormatter
     {
-        
-        public struct Config
+        public TextFormatter(bool _eng, bool _rus, bool _dig)
         {
-            public bool rus;
-            public bool eng;
-            public bool dig;
+            Config config = new Config(_eng,_rus,_dig);
+        }
+        private struct Config
+        {
+            private bool eng;
+            private bool rus;
+            private bool dig;
 
             public Config(bool _eng, bool _rus, bool _dig)
             {
                 eng = _eng;
                 rus = _rus;
-                dig = _dig; 
+                dig = _dig;
             }
         }
-
+        
         bool IsRussian(char symbol)
         {
             return (symbol >= 'a' && symbol <= 'z') || (symbol >= 'A' && symbol <= 'Z');
@@ -45,5 +48,7 @@ namespace TextCleaner
             }
             return newString.ToString();
         }
+        
+        static  void Main() {}
     }
 }
