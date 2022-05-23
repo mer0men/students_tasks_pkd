@@ -42,6 +42,7 @@ namespace TextCleaner
             Config config = new Config();
             foreach (char elem in sourceString)
             {
+                if (elem == ' ') newString.Append(elem);
                 if (IsEnglish(elem)) newString.Append(elem);
                 if (IsRussian(elem)) newString.Append(elem);
                 if (IsDigital(elem)) newString.Append(elem);
