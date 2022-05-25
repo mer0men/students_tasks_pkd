@@ -41,7 +41,8 @@ namespace TextCleaner
                 if (IsRussian(elem) && rus) newString.Append(elem);
                 if (IsDigital(elem) && dig) newString.Append(elem);
             }
-            
+
+            while (newString.ToString().Contains("  ")) newString.Replace("  ", " ");
             return newString.ToString().Trim(' ');
         }
         
