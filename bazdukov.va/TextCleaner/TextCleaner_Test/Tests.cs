@@ -19,7 +19,7 @@ namespace TextCleaner_Test
         [Test]
         public void Test2()
         {
-            TextFormatter cleaner = new TextFormatter(true,false,true);
+            TextFormatter cleaner = new TextFormatter(false,true,true);
             string source = "Hello друг";
             string target = "друг";
             string result = cleaner.FormatString(source);
@@ -77,7 +77,7 @@ namespace TextCleaner_Test
         [Test]
         public void Test8()
         {
-            TextFormatter cleaner = new TextFormatter(false,true,false);
+            TextFormatter cleaner = new TextFormatter(true,false,false);
             string source = "strоkа";
             string target = "strk";
             string result = cleaner.FormatString(source);
