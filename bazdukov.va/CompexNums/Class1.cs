@@ -45,3 +45,16 @@ namespace CompexNums
         
     }
 }
+
+public class Polar
+{
+    private double r;
+    private double angle;
+
+    public Polar(double _r, double _angle)
+    {
+        r = _r;
+        angle = _angle;
+    }
+    
+}
