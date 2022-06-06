@@ -33,6 +33,10 @@ namespace CompexNums
             float img = (second.real * first.img - first.real * second.img) / (second.real * second.real + second.img * second.img);
             return new Complex(real, img);
         }
+        public string ToString(Complex num)
+        {
+            return $"{num.real} + {num.img}i";
+        }
         
     }
 }
