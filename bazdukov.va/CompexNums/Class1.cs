@@ -100,4 +100,9 @@ public class Polar
         Complex b = second.ToComplex();
         return ((a / b).ToPolar());
     }
+
+    public string PolarToString()
+    {
+        return $"{this.value} ∠{this.angle}";
+    }
 }
