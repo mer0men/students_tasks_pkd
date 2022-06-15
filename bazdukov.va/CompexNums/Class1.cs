@@ -69,5 +69,13 @@ public class Polar
         value = _value;
         angle = _angle;
     }
-    
+
+    public static Polar operator +(Polar first, Polar second)
+    {
+        double value = Math.Sqrt((first.value * first.value) + (second.value * second.value) -
+            2 * first.value * second.value * Math.Cos(first.angle + Math.PI - second.value));
+        double angle = Math.Asin(Math.Sin(first.angle + Math.PI - second.value) * 
+            second.value / value) - first.angle;
+        return new Polar(value, angle);
+    }
 }
