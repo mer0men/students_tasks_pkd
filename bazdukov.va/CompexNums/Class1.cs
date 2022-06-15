@@ -82,5 +82,22 @@ public class Polar
         Complex b = second.ToComplex();
         return ((a + b).ToPolar());
     }
-    
+    public static Polar operator -(Polar first, Polar second)
+    {
+        Complex a = first.ToComplex();
+        Complex b = second.ToComplex();
+        return ((a - b).ToPolar());
+    }
+    public static Polar operator *(Polar first, Polar second)
+    {
+        Complex a = first.ToComplex();
+        Complex b = second.ToComplex();
+        return ((a * b).ToPolar());
+    }
+    public static Polar operator /(Polar first, Polar second)
+    {
+        Complex a = first.ToComplex();
+        Complex b = second.ToComplex();
+        return ((a / b).ToPolar());
+    }
 }
