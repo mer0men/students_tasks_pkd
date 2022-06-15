@@ -41,7 +41,9 @@ namespace CompexNums
         public Complex ComplexPow(double n)
         {
            double module = Math.Sqrt(this.real * this.real + this.img * this.img);
+           module = Math.Round(module, 2);
            double argue = Math.Atan(this.img / this.real);
+           argue = Math.Round(argue, 2);
            Complex z = new Complex(module * Math.Cos(argue), module * Math.Sin(argue));
            return new Complex(z.real * n, z.img * n);
         }
@@ -56,6 +58,8 @@ namespace CompexNums
             if (this.real == 0 && this.img > 0) angle = Math.PI / 2;
             if (this.real == 0 && this.img < 0) angle = 3 *Math.PI / 2;
             if (this.real == 0 && this.img == 0) angle = 0;
+            value = Math.Round(value, 2);
+            angle = Math.Round(angle, 2);
             return new Polar(value, angle);
         }
     }
@@ -78,6 +82,7 @@ public class Polar
     }
     public static Polar operator +(Polar first, Polar second)
     {
+        
         Complex a = first.ToComplex();
         Complex b = second.ToComplex();
         return ((a + b).ToPolar());
