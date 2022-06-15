@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Numerics;
+using CompexNums;
+
 namespace CompexNums
 {
     public class Complex
@@ -70,6 +72,10 @@ public class Polar
         angle = _angle;
     }
 
+    public Complex ToComplex()
+    {
+        return new Complex(this.value * Math.Cos(angle), this.value * Math.Sin(angle));
+    }
     public static Polar operator +(Polar first, Polar second)
     {
         double value = Math.Sqrt((first.value * first.value) + (second.value * second.value) -
@@ -78,4 +84,5 @@ public class Polar
             second.value / value) - first.angle;
         return new Polar(value, angle);
     }
+    
 }
