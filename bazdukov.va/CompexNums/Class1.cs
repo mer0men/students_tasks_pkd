@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Numerics;
 namespace CompexNums
 {
     public class Complex
@@ -42,18 +43,30 @@ namespace CompexNums
            Complex z = new Complex(module * Math.Cos(argue), module * Math.Sin(argue));
            return new Complex(z.real * n, z.img * n);
         }
-        
+
+        public Polar ToPolar()
+        {
+            double value = Math.Sqrt(this.img * this.img + this.real * this.real);
+            double angle = 0;
+            if (this.real > 0 && this.img >= 0) angle = Math.Atan(this.img / this.real);
+            if (this.real > 0 && this.img < 0) angle = Math.Atan(this.img / this.real) + 2 * Math.PI;
+            if (this.real < 0) angle = Math.Atan(this.img / this.real) + Math.PI;
+            if (this.real == 0 && this.img > 0) angle = Math.PI / 2;
+            if (this.real == 0 && this.img < 0) angle = 3 *Math.PI / 2;
+            if (this.real == 0 && this.img == 0) angle = 0;
+            return new Polar(value, angle);
+        }
     }
 }
 
 public class Polar
 {
-    private double r;
+    private double value;
     private double angle;
 
-    public Polar(double _r, double _angle)
+    public Polar(double _value, double _angle)
     {
-        r = _r;
+        value = _value;
         angle = _angle;
     }
     
