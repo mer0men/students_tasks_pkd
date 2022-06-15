@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Numerics;
 using CompexNums;
-
 namespace CompexNums
 {
     public class Complex
@@ -31,9 +30,13 @@ namespace CompexNums
         public static Complex operator /(Complex first, Complex second)
         {
             double real = (first.real * second.real + first.img * second.img) / (second.real * second.real + second.img * second.img);
+            real = Math.Round(real, 2);
             double img = (second.real * first.img - first.real * second.img) / (second.real * second.real + second.img * second.img);
+            img = Math.Round(img, 2);
             return new Complex(real, img);
         }
+
+      
         public string ToComplexString()
         {
             return this.real > 0 ? $"{this.real}+{this.img}i" : $"{this.real}{this.img}i";
@@ -64,7 +67,6 @@ namespace CompexNums
         }
     }
 }
-
 public class Polar
 {
     private double value;
@@ -111,3 +113,5 @@ public class Polar
         return $"{this.value} ∠{this.angle}";
     }
 }
+
+
