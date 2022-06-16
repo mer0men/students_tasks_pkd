@@ -1,0 +1,11 @@
+C:\Users\bazdu\RiderProjects\students_tasks_pkd\bazdukov.va\TextCleaner\TextCleaner_Test\bin\Debug\TextCleaner_Test.dll
+C:\Users\bazdu\RiderProjects\students_tasks_pkd\bazdukov.va\TextCleaner\TextCleaner_Test\bin\Debug\TextCleaner_Test.pdb
+C:\Users\bazdu\RiderProjects\students_tasks_pkd\bazdukov.va\TextCleaner\TextCleaner_Test\bin\Debug\nunit.framework.dll
+C:\Users\bazdu\RiderProjects\students_tasks_pkd\bazdukov.va\TextCleaner\TextCleaner_Test\bin\Debug\TextCleaner.exe
+C:\Users\bazdu\RiderProjects\students_tasks_pkd\bazdukov.va\TextCleaner\TextCleaner_Test\bin\Debug\TextCleaner.pdb
+C:\Users\bazdu\RiderProjects\students_tasks_pkd\bazdukov.va\TextCleaner\TextCleaner_Test\bin\Debug\nunit.framework.xml
+C:\Users\bazdu\RiderProjects\students_tasks_pkd\bazdukov.va\TextCleaner\TextCleaner_Test\obj\Debug\TextCleaner_Test.csproj.AssemblyReference.cache
+C:\Users\bazdu\RiderProjects\students_tasks_pkd\bazdukov.va\TextCleaner\TextCleaner_Test\obj\Debug\TextCleaner_Test.csproj.CoreCompileInputs.cache
+C:\Users\bazdu\RiderProjects\students_tasks_pkd\bazdukov.va\TextCleaner\TextCleaner_Test\obj\Debug\TextCleaner_Test.csproj.CopyComplete
+C:\Users\bazdu\RiderProjects\students_tasks_pkd\bazdukov.va\TextCleaner\TextCleaner_Test\obj\Debug\TextCleaner_Test.dll
+C:\Users\bazdu\RiderProjects\students_tasks_pkd\bazdukov.va\TextCleaner\TextCleaner_Test\obj\Debug\TextCleaner_Test.pdb
